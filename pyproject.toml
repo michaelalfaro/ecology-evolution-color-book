@@ -1,0 +1,12 @@
+[project]
+name = "ecology-evolution-color-book"
+version = "0.0.1"
+description = "Tooling for The Ecology and Evolution of Color (textbook)"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

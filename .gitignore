@@ -1,0 +1,10 @@
+_site/
+*.pdf
+!docs/**/*.pdf
+.venv/
+__pycache__/
+.pytest_cache/
+refs-cache/
+.DS_Store
+tests/*.pdf
+.superpowers/
