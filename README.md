@@ -26,7 +26,7 @@ Latest drafts: https://michaelalfaro.github.io/ecology-evolution-color-book/
 ## Adding a chapter's draft
 
 1. `.venv/bin/python scripts/source_pack.py 7` writes `drafts/source-packs/lec07.md` (notes, script, slides + speaker notes, review guide, Further Explorations, image inventory).
-2. Write prose into `chapters/07-building-a-color-percept.typ`. Every chapter uses the same skeleton: `= Title`, `#in-this-chapter(...)`, `#epigraph(...)`, sections with question titles, boxes (`#physics`, `#casestudy`, `#tryit`, `#keyconcept`, `#caveat`), then `#key-ideas(...)`, `#open-questions(...)`, `#going-further(...)`.
+2. Ask for a chapter outline from the source pack: the topics to cover, the gaps in the existing notes, and figure candidates. Then write the prose yourself into `chapters/07-building-a-color-percept.typ`, filling in the outline. The words are the author's; the outline is scaffolding. Every chapter uses the same skeleton: `= Title`, `#in-this-chapter(...)`, `#epigraph(...)`, sections with question titles, boxes (`#physics`, `#casestudy`, `#tryit`, `#keyconcept`, `#caveat`), then `#key-ideas(...)`, `#open-questions(...)`, `#going-further(...)`.
 3. Cite with `@key`; keys are in `refs.bib`. Missing paper? Add its DOI to `scripts/dois.txt`, run `scripts/fetch_bibtex.py`.
 4. `typst watch --font-path fonts --ignore-system-fonts --input chapter=07 main.typ ch07.pdf` while writing.
 5. Commit and push; CI publishes `chapters/ch07.pdf` and the full book.
