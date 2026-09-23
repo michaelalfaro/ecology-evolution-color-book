@@ -1,6 +1,8 @@
 # The Ecology and Evolution of Color: From Photons to Phylogenies
 
-Draft textbook by Michael Alfaro (UCLA EEB), built from EEB 187. Typeset in Typst.
+Draft textbook by Michael Alfaro (UCLA EEB), built from EEB 187 / EE BIOL 138. Typeset in Typst.
+
+Latest drafts: https://michaelalfaro.github.io/ecology-evolution-color-book/
 
 ## Build
 
