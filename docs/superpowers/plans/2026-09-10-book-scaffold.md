@@ -759,7 +759,7 @@ Claude-Session: https://claude.ai/code/session_01CbqBVBRvFGErUWwqAcYdEX"
 
 **Interfaces:**
 - Produces: `register_book_fonts(fonts_dir = "fonts")`, `theme_book(base_size = 9)`, `save_fig(plot, name, chapter, width_mm = 134, height_mm = 80)` writing `figures/chNN/<name>.svg`.
-- Downstream: chapters call `#fig("../figures/ch02/blackbody.svg", [...])`.
+- Downstream: chapters call `#fig("figures/ch02/blackbody.svg", [...])`.
 
 - [ ] **Step 1: Write the check (fails until the example figure exists)**
 
@@ -775,7 +775,7 @@ cat > tests/fig.typ <<'T'
 #import "../lib.typ": *
 #show: book.with(title: [fig], draft: true)
 = Test
-#fig("../figures/ch02/blackbody.svg", [Blackbody spectra at three temperatures.], credit: [Figure: M. Alfaro]) <fig-bb>
+#fig("figures/ch02/blackbody.svg", [Blackbody spectra at three temperatures.], credit: [Figure: M. Alfaro]) <fig-bb>
 See @fig-bb.
 T
 typst compile --font-path fonts --ignore-system-fonts tests/fig.typ tests/fig.pdf 2>&1 | tee tests/fig.log
@@ -1448,7 +1448,7 @@ Append to `README.md`:
 
 ## Adding a figure
 
-- Generated: write an R script under `R/`, `source("R/theme_book.R"); register_book_fonts()`, build a ggplot with `theme_book()`, `save_fig(p, "name", chapter = 7)`. Place with `#fig("../figures/ch07/name.svg", [Caption.], credit: [Figure: M. Alfaro]) <fig-name>`.
+- Generated: write an R script under `R/`, `source("R/theme_book.R"); register_book_fonts()`, build a ggplot with `theme_book()`, `save_fig(p, "name", chapter = 7)`. Place with `#fig("figures/ch07/name.svg", [Caption.], credit: [Figure: M. Alfaro]) <fig-name>`.
 - Photograph: put a JPEG sized for print (about 1,900 px wide for full text width) in `figures/chNN/` and always pass `credit:` (photographer, license). Wikimedia credits for course images live in the course repo's `lectures/images/lec-NN/CREDITS.md`.
 - Small: `#margin-fig(...)` puts it in the outer column.
 
